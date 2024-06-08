@@ -1,0 +1,5 @@
+# Stage the .gitignore file
+git add .gitignore
+
+# Stage the node_modules directory
+git add node_modules
