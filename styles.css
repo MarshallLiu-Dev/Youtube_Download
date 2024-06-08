@@ -1,165 +1,89 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+    padding: 20px;
     background: rgb(145,40,206);
     background: linear-gradient(90deg, rgba(145,40,206,1) 0%, rgba(233,81,82,1) 100%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: #333;
+    color: #fff;
 }
 
 h1 {
-    color: #444;
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-}
-
-label {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    font-size: 1em;
-}
-
-button {
-    background: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #218838;
-}
-
-.alert {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 4px;
-    color: #fff;
-    display: none;
-    width: 300px;
     text-align: center;
+    color: #fff;
+    font: bold;
 }
 
-.alert-success {
-    background: #28a745;
-}
-
-
-/* Adicione esses estilos ao final do arquivo styles.css */
-#downloads-container {
-    margin-top: 30px;
-}
-
-#downloads-list {
-    list-style-type: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.download-item {
-    margin-bottom: 5px;
-    padding: 10px;
-    background-color: #161515;
-    border-radius: 4px;
-    border: 1px solid #000000;
-}
-
-.download-item button {
-    background: #dc3545;
-    color: #020202;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    margin-left: 10px;
-}
-
-.download-item button:hover {
-    background: #c82333;
+h2 {
+    margin-top: 20px;
+    color: #fff;
 }
 
 
-/* Adicione esses estilos ao final do arquivo styles.css */
+
+
 #download-form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; 
+    margin: 20px 0;
 }
 
 #url-input {
-    margin-bottom: 10px; /* Espaçamento abaixo do campo de URL */
+    margin-bottom: 10px; 
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1em;
 }
 
 #download-form button {
-    margin-top: 10px; /* Espaçamento acima dos botões */
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #download-form button[type="submit"] {
-    background-color: #28a745; /* Cor verde para o botão de download */
+    background-color: #28a745; 
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
 }
 
 #download-form button[type="submit"]:hover {
-    background-color: #218838; /* Cor de hover para o botão de download */
+    background-color: #218838; 
 }
 
 #download-form button[type="button"] {
-    background-color: #dc3545; /* Cor vermelha para o botão de limpar */
+    background-color: #dc3545; 
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
 }
 
 #download-form button[type="button"]:hover {
-    background-color: #c82333; /* Cor de hover para o botão de limpar */
+    background-color: #c82333; 
 }
 
-
 .progress-container {
-    width: 100%;
-    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
     background-color: #ddd;
     border-radius: 4px;
     overflow: hidden;
+    margin: 20px auto;
 }
 
 .progress-bar {
@@ -167,6 +91,27 @@ button:hover {
     height: 20px;
     background-color: #4caf50;
     transition: width 0.3s;
-    text-align: center; /* Centraliza o texto dentro da barra de progresso */
-    line-height: 20px; /* Define a altura da linha igual à altura da barra de progresso para centralizar verticalmente */
+    text-align: center; 
+    line-height: 20px; 
+    color: white;
+}
+
+.alert {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.alert-success {
+    background-color: #28a745;
+    
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #fff;
 }

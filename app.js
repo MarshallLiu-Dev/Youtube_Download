@@ -44,7 +44,7 @@ async function downloadAudio(youtubeUrl, outputPath) {
     }
 }
 
-// Exemplo de uso
+
 const youtubeUrl = 'https://www.youtube.com/watch?v=52QujwsiJ4o';
 const outputPath = './downloads'; // Caminho para salvar os arquivos baixados
 downloadAudio(youtubeUrl, outputPath);
