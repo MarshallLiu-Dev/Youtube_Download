@@ -1,5 +1,9 @@
 // const { ipcRenderer } = require('electron');
 
+// function updateUrlInput(downloadPath) {
+//     document.getElementById('url-input').value = downloadPath;
+// }
+
 // document.getElementById('download-form').addEventListener('submit', (e) => {
 //     e.preventDefault();
 //     const youtubeUrl = document.getElementById('url-input').value;
@@ -23,10 +27,12 @@
 //         alertBox.style.display = 'none';
 //         document.getElementById('progress-bar').style.width = '0%';
 //         document.getElementById('progress-bar').innerText = '';
-//     }, 15000); // Ocultar a mensagem após 5 segundos e redefinir a barra de progresso
+//     }, 15000); // Ocultar a mensagem após 15 segundos e redefinir a barra de progresso
 // });
 
 // ipcRenderer.on('downloaded', (event, downloadPath) => {
+//     updateUrlInput(downloadPath);
+    
 //     const downloadsList = document.getElementById('downloads-list');
 //     const listItem = document.createElement('li');
 //     listItem.classList.add('download-item');
@@ -41,7 +47,6 @@
 // });
 
 
-
 const { ipcRenderer } = require('electron');
 
 function updateUrlInput(downloadPath) {
@@ -51,7 +56,8 @@ function updateUrlInput(downloadPath) {
 document.getElementById('download-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const youtubeUrl = document.getElementById('url-input').value;
-    ipcRenderer.send('download-video', youtubeUrl);
+    const downloadType = document.querySelector('input[name="download-type"]:checked').value;
+    ipcRenderer.send('download-video', { youtubeUrl, downloadType });
 });
 
 document.getElementById('clear-button').addEventListener('click', () => {
@@ -71,7 +77,7 @@ ipcRenderer.on('download-complete', (event, message) => {
         alertBox.style.display = 'none';
         document.getElementById('progress-bar').style.width = '0%';
         document.getElementById('progress-bar').innerText = '';
-    }, 15000); // Ocultar a mensagem após 15 segundos e redefinir a barra de progresso
+    }, 115000); // Ocultar a mensagem após 15 segundos e redefinir a barra de progresso
 });
 
 ipcRenderer.on('downloaded', (event, downloadPath) => {

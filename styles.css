@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'SF Pro Display';
     src: url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
     font-weight: normal;
@@ -106,6 +106,137 @@ h2 {
 .alert-success {
     background-color: #28a745;
     
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #fff;
+} */
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: rgb(145,40,206);
+    background: linear-gradient(90deg, rgba(145,40,206,1) 0%, rgba(233,81,82,1) 100%);
+    color: #fff;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font: bold;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+#download-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo com transparência */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Efeito de desfoque para navegadores baseados em WebKit */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda leve para melhor definição */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#url-input {
+    margin-bottom: 10px; /* Espaçamento abaixo do campo de URL */
+    padding: 10px;
+    width: 80%;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.2); /* Cor de fundo com transparência */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#download-form button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#download-form button[type="submit"] {
+    background-color: #28a745; /* Cor verde para o botão de download */
+    color: #fff;
+}
+
+#download-form button[type="submit"]:hover {
+    background-color: #218838; /* Cor de hover para o botão de download */
+}
+
+#download-form button[type="button"] {
+    background-color: #dc3545; /* Cor vermelha para o botão de limpar */
+    color: #fff;
+}
+
+#download-form button[type="button"]:hover {
+    background-color: #c82333; /* Cor de hover para o botão de limpar */
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50;
+    transition: width 0.3s;
+    text-align: center; /* Centraliza o texto dentro da barra de progresso */
+    line-height: 20px; /* Define a altura da linha igual à altura da barra de progresso para centralizar verticalmente */
+    color: white;
+}
+
+.alert {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: #fff;
 }
 
 footer {
